@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Archivo CSS de la página -->
+    <link rel="stylesheet" href="./CSS/main.css">
+
+    <title>Casa Brett!</title>
+  </head>
+  <body>
+    <!-- ============================================= -->
+    <!-- ENCABEZADO -->
+    <!-- ============================================= -->
+    <header class="container-fluid bg-primary d-flex justify-content-center">
+      <p class="text-light mb-0 p-2 fs-6">Contáctanos 011 5350-5841</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-3" id="menu">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><span class="text-primary fs-5 fw-bold">Casa Brett</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#equipo">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seccion-contacto">Contacto</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="email" placeholder="Correo electrónico" aria-label="email">
+            <button class="btn btn-primary btn-primary-outline-success" type="button">Suscríbete</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- ============================================= -->
+    <!-- SLIDER DE IMÁGENES -->
+    <!-- ============================================= -->
+    <div id="carouselExampleControls" class="carousel slide1" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="./img/casaBrett.jpg" class="d-block w-100" alt="Foto de Casa Brett">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./img/picada190.jpg" class="d-block w-100" alt="Una picada">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./img/jamones/jamonCrudo.jpg" class="d-block w-100" alt="Jamón crudo">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- ============================================= -->
+    <!-- INTRO -->
+    <!-- ============================================= -->
+    <section class="w-50 mx-auto text-center pt-5" id="intro">
+      <h1 class="p-3 fs-2 border-top border-3">Te esperamos...<span class="text-primary"> FIAMBRERÍA agradable, exclusiva, única y de excelente servicio en tu BARRIO</span></h1>
+      <p><span class="text-primary">Casa Brett</span> es un lugar con calidad atención que expende variados productos básicos de alimentación, marcas excelentes y certificadas.</p>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- PRODUCTOS -->
+    <!-- ============================================= -->
+    <section class="container-fluid">
+      <div class="row w-75 mx-auto fila-productos">
+        <div class="col-sm-12 col-md-12 col-lg-6 my-4 text-center icono-wrap">
+          <img src="./img/jamones/jamonMontBlanc.jpg" alt="Jamón MontBlanc" width="180" height="160">
+          <div>
+            <h3 class="fs-5 mt-4 px-4 pb-1">Jamón</h3>
+            <p class="px-4">Sabroso producto alimenticio obtenido de las patas traseras del cerdo, ofrecemos muy buenas marcas de jamón para tu consumo (natural, cocido, crudo). Igualmente expendemos otros productos derivados: mortadela, salame, salamín, cantinpalo, entre otros.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 my-4 text-center icono-wrap">
+          <img src="./img/quesos/tibo.jpg" alt="Fetas" width="180" height="160">
+          <div>
+            <h3 class="fs-5 mt-4 px-4 pb-1">Quesos</h3>
+            <p class="px-4">Alimento milenario y muy ligado a las tradiciones y a la cultura gastronómica en el mundo, sobretodo en Argentina. Los quesos son productos frescos o madurados, con infinitas variedades (frescos, blandos, semiduros, duros, fundidos, con hongos en la superficie o en el interior, con especias, etc.) y con un alto valor nutritivo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row w-75 mx-auto fila-productos">
+        <div class="col-sm-12 col-md-12 col-lg-6 my-4 text-center icono-wrap">
+          <img src="./img/picadas/laPicada.jpg" alt="Picadas" width="150" height="180">
+          <div>
+            <h3 class="fs-5 mt-4 px-4 pb-1">Picadas</h3>
+            <p class="px-4">Picadas chicas, picadas grandes, picadas extra grandes y combinadas! Picadas de fiambre o vegetarianas, con quesos variados y con productos seleccionados de primera con calidad Premium.</p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 my-4 text-center icono-wrap">
+          <img src="./img/delicatessen/delicatessen2.jpg" alt="Jamón Monnt Blanc" width="220" height="180">
+          <div>
+            <h3 class="fs-5 mt-4 px-4 pb-1">Delicatessen</h3>
+            <p class="px-4">Exquisiteces, alimentos de alta calidad o exclusivos por sus características especiales, exóticos y de elevada calidad en su ejecución productos delicados de alta gama.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- ACERCA DE NOSOTROS -->
+    <!-- ============================================= -->
+    <section>
+      <div class="w-75 m-auto text-center" id="equipo">
+        <h1 class="mt-5 fs-2">Equipo pequeño con<span class="text-primary"> Resultados y Sueños Grandes</span></h1>
+        <p class="fs-4">Una familia emprendedora, luchadora, con voluntad firme de surgir en este país, Argentina, que le ha abierto las puertas para seguir creciendo, dando el mejor servicio como honra; brindando una atención merecida, adecuada y con mucho respeto.</p>
+      </div>
+      <div class="mt-5 text-center">
+        <img class="img-fluid" src="./img/ourProject.png"  alt="familia-equipo" width="90%">
+      </div>
+
+      <div id="local" class="border-top border-3">
+        <div class="mapa"></div>
+        <div>
+          <div class="wrapper">
+            <h2>Ubicado en el barrio Balvanera en Buenos Aires</h2>
+            <h2 class="text-primary mb-4" id="typewriter"></h2>
+            <p class="fs-5 text-body">Elegimos la Avenida Independencia en el Barrio Balvanera por la oportunidad conseguida, además es una avenida bastante transitada del centro Porteño, con bastantes edificios y excelentes clientes a su alrededor, comercios, tiendas y restaurantes por la zona, y es una vía de salida hacia las afueras de la ciudad.</p>
+            <section class="d-flex" id="numeros-local">
+              <div>
+                <p class="text-primary fs-5">17.9°</p>
+                <p>Temperatura media</p>
+              </div>
+              <div>
+                <p class="text-primary fs-5">71,4%</p>
+                <p>Humedad relativa promedio</p>
+              </div>
+              <div>
+                <p class="text-primary fs-5">1236.3 mm</p>
+                <p>Media de precipitación</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- FORMULARIO BG-->
+    <!-- ============================================= -->
+    <section id="seccion-contacto" class="border-bottom border-secondary border-2">
+      <div id="bg-contacto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L20,213.3C40,171,80,85,120,58.7C160,32,200,64,240,74.7C280,85,320,75,360,69.3C400,64,440,64,480,90.7C520,117,560,171,600,213.3C640,256,680,288,720,288C760,288,800,256,840,208C880,160,920,96,960,106.7C1000,117,1040,203,1080,213.3C1120,224,1160,160,1200,160C1240,160,1280,224,1320,218.7C1360,213,1400,139,1420,101.3L1440,64L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z"></path></svg>
+      </div>
+        <!-- ============================================= -->
+        <!-- FORMULARIO-->
+        <!-- ============================================= -->
+      <div class="container" id="contenedor-formulario">
+        <div id="titulo-formulario" class="text-center mb-4">
+          <div><img src="./img/support.jpg" alt="Contacto" class="img-fluid"></div>
+          <h2>Contactos</h2>
+          <p class="fs-5">Seguimos aquí para hacer con distinción una experiencia amigable de servicio.</p>
+        </div>
+        <form action="">
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="nombre" placeholder="Yurancy Durán" required>
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="tel" placeholder="00-0000-0000" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe tu mensaje acá"></textarea>
+          </div>
+          <div class="mb-3">
+            <button type="button" class="btn btn-primary w-100 fs-5">Enviar Mensaje</button>
+
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- FOOTER-->
+    <!-- ============================================= -->
+
+    <footer class="w-100 d-flex align-items justify-content-center flex-wrap">
+      <p class="fs-5 px-3 pt-3">Casa Brett &copy; Todos los derechos reservados 2022</p>
+      <div id="iconos">
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter"></i></a>
+      </div>
+    </footer>
+
+    <!-- Option: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Para usar typewriter -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <!-- JS de la página web -->
+    <script src="main.js"></script>
+  </body>
+</html>
