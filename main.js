@@ -23,19 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-const app= document.getElementById('typewriter');
-
-const typewriter = new Typewriter(app, {
-    loop: true,
-    delay: 75
-});
-
-typewriter
- .typeString('Nuestra Señora del Buen Ayre')
- .pauseFor(200)
- .start();
-
- document.getElementById('recipe-form').addEventListener('submit', function (e) {
+document.getElementById('recipe-form').addEventListener('submit', function (e) {
     e.preventDefault();
   
     const query = document.getElementById('query').value;
@@ -68,3 +56,15 @@ typewriter
       })
       .catch(error => console.error('Error fetching recipes:', error));
   });
+
+const app= document.getElementById('typewriter');
+
+    const typewriter = new Typewriter(app, {
+        loop: true,
+        delay: 75
+    });
+
+typewriter
+ .typeString('Nuestra Señora del Buen Ayre')
+ .pauseFor(200)
+ .start();
