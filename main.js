@@ -15,7 +15,7 @@ document.getElementById('login-form').addEventListener('submit', function (e) {
   const password = document.getElementById('password').value;
 
   // Replace this with actual login logic
-  if (email === 'user@example.com' && password === 'password') {
+  if (email === 'yeimeralberto.mr@gmail.com' && password === 'CAC123') {
     sessionStorage.setItem('isLoggedIn', 'true');
     checkLogin();
   } else {
