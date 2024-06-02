@@ -1,27 +1,27 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('login-form');
-    const loginButton = document.getElementById('login-button');
-    const contenidoPrivado = document.getElementById('contenido-privado');
-  
-    loginForm.addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita que el formulario se envíe
-  
-      // Aquí deberías validar el inicio de sesión (por ejemplo, enviar los datos a un servidor)
-  
-      // Simulando inicio de sesión exitoso
-      const email = document.getElementById('email').value;
-      const password = document.getElementById('password').value;
-  
-      if (email === 'tu@email.com' && password === 'tucontraseña') {
-        // Ocultar botón de inicio de sesión
-        loginButton.style.display = 'none';
-        // Mostrar contenido privado
-        contenidoPrivado.style.display = 'block';
-      } else {
-        alert('Usuario o contraseña incorrectos');
-      }
-    });
-  });
+function checkLogin() {
+  const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+  if (isLoggedIn) {
+    document.getElementById('login-form-container').style.display = 'none';
+    document.getElementById('main-content').style.display = 'block';
+  } else {
+    document.getElementById('login-form-container').style.display = 'flex';
+    document.getElementById('main-content').style.display = 'none';
+  }
+}
+
+document.getElementById('login-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  // Replace this with actual login logic
+  if (email === 'user@example.com' && password === 'password') {
+    sessionStorage.setItem('isLoggedIn', 'true');
+    checkLogin();
+  } else {
+    alert('Correo o contraseña incorrectos.');
+  }
+});
   
 document.getElementById('recipe-form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -68,3 +68,12 @@ typewriter
  .typeString('Nuestra Señora del Buen Ayre')
  .pauseFor(200)
  .start();
+
+ function enviarMensaje() {
+  const nombre = document.getElementById('nombre').value;
+  const correo = document.getElementById('correo').value;
+  const mensaje = document.getElementById('mensaje').value;
+
+  // Aquí puedes agregar la lógica para enviar el mensaje (ejemplo)
+  alert(`Mensaje enviado por ${nombre} (${correo}): ${mensaje}`);
+}

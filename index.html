@@ -14,7 +14,31 @@
 
     <title>Casa Brett!</title>
   </head>
-  <body>
+  <body onload="checkLogin()">
+    <!-- ============================================= -->
+    <!-- LOGIN FORM -->
+    <!-- ============================================= -->
+    <div id="login-form-container" class="d-flex justify-content-center align-items-center vh-100 bg-light" style="display: none;">
+      <div class="card p-4">
+        <h5 class="card-title text-center">Iniciar Sesión</h5>
+        <div class="card-body">
+          <form id="login-form">
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-content" style="display: none;">
+    
     <!-- ============================================= -->
     <!-- ENCABEZADO -->
     <!-- ============================================= -->
@@ -79,41 +103,6 @@
     <section class="w-50 mx-auto text-center pt-5" id="intro">
       <h1 class="p-3 fs-2 border-top border-3">Te esperamos...<span class="text-primary"> FIAMBRERÍA agradable, exclusiva, única y de excelente servicio en tu BARRIO</span></h1>
       <p><span class="text-primary">Casa Brett</span> es un lugar con calidad atención que expende variados productos básicos de alimentación, marcas excelentes y certificadas.</p>
-    </section>
-
-    <!-- ============================================= -->
-    <!-- Nueva sección para Iniciar Sesión -->
-    <!-- ============================================= -->
-    <section id="login-section">
-      <!-- Botón para abrir el modal de inicio de sesión -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-          Iniciar Sesión
-      </button>
-
-      <!-- Modal de inicio de sesión -->
-      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                      <form id="login-form">
-                          <div class="mb-3">
-                              <label for="email" class="form-label">Correo Electrónico</label>
-                              <input type="email" class="form-control" id="email" required>
-                          </div>
-                          <div class="mb-3">
-                              <label for="password" class="form-label">Contraseña</label>
-                              <input type="password" class="form-control" id="password" required>
-                          </div>
-                          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
     </section>
 
     <!-- ============================================= -->
@@ -258,6 +247,7 @@
         <a href="#"><i class="bi bi-twitter"></i></a>
       </div>
     </footer>
+    </div>
 
     <!-- Option: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
