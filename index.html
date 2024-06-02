@@ -82,6 +82,41 @@
     </section>
 
     <!-- ============================================= -->
+    <!-- Nueva sección para Iniciar Sesión -->
+    <!-- ============================================= -->
+    <section id="login-section">
+      <!-- Botón para abrir el modal de inicio de sesión -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+          Iniciar Sesión
+      </button>
+
+      <!-- Modal de inicio de sesión -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form id="login-form">
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Correo Electrónico</label>
+                              <input type="email" class="form-control" id="email" required>
+                          </div>
+                          <div class="mb-3">
+                              <label for="password" class="form-label">Contraseña</label>
+                              <input type="password" class="form-control" id="password" required>
+                          </div>
+                          <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
     <!-- PRODUCTOS -->
     <!-- ============================================= -->
     <section class="container-fluid">
@@ -116,6 +151,23 @@
             <p class="px-4">Exquisiteces, alimentos de alta calidad o exclusivos por sus características especiales, exóticos y de elevada calidad en su ejecución productos delicados de alta gama.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ============================================= -->
+    <!-- Formulario de Búsqueda -->
+    <!-- ============================================= -->
+    <section class="container my-5">
+      <div class="row">
+        <div class="col-md-12">
+          <form id="recipe-form" class="input-group mb-3">
+            <input type="text" id="query" class="form-control" placeholder="Buscar recetas con fiambres" aria-label="Buscar recetas">
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="recipes">
+        <!-- Aquí se mostrarán las recetas -->
       </div>
     </section>
 
