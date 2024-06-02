@@ -1,28 +1,48 @@
-function checkLogin() {
-  const isLoggedIn = sessionStorage.getItem('isLoggedIn');
-  if (isLoggedIn) {
-    document.getElementById('login-form-container').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-  } else {
-    document.getElementById('login-form-container').style.display = 'flex';
-    document.getElementById('main-content').style.display = 'none';
-  }
-}
 
-document.getElementById('login-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
+document.addEventListener("DOMContentLoaded", function() {
+  const loginForm = document.getElementById("login-form");
+  const loginFormContainer = document.getElementById("login-form-container");
+  const mainContent = document.getElementById("main-content");
 
-  // Replace this with actual login logic
-  if (email === 'yeimeralberto.mr@gmail.com' && password === 'CAC123') {
-    sessionStorage.setItem('isLoggedIn', 'true');
-    checkLogin();
-  } else {
-    alert('Correo o contraseña incorrectos.');
+  loginForm.addEventListener("submit", function(event) {
+    event.preventDefault(); // Evita el envío del formulario
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    // Logica de Inicio de Sesión
+    if (email === 'yeimeralberto.mr@gmail.com' && password === 'CAC123') {
+      sessionStorage.setItem('isLoggedIn', 'true');
+      checkLogin();
+    } else {
+      alert('Correo o contraseña incorrectos.');
+    }
+
+    // Guardar el estado de inicio de sesión en sessionStorage
+    sessionStorage.setItem("loggedIn", "true");
+
+    // Ocultar el formulario de inicio de sesión y mostrar el contenido principal
+    loginFormContainer.style.display = "none";
+    mainContent.style.display = "block";
+  });
+
+  function checkLogin() {
+    const loggedIn = sessionStorage.getItem("loggedIn");
+
+    if (loggedIn === "true") {
+      // El usuario está logueado, muestra el contenido principal
+      loginFormContainer.style.display = "none";
+      mainContent.style.display = "block";
+    } else {
+      // El usuario no está logueado, muestra el formulario de inicio de sesión
+      loginFormContainer.style.display = "flex";
+      mainContent.style.display = "none";
+    }
   }
+
+  // Llamar a checkLogin() cuando se carga la página
+  checkLogin();
 });
-  
+
 document.getElementById('recipe-form').addEventListener('submit', function (e) {
     e.preventDefault();
   
